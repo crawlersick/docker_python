@@ -27,5 +27,10 @@ COPY . .
 
 #CMD [ "python", "./your-daemon-or-script.py" ]
 #CMD [ "/bin/bash" ]
+RUN curl -sL https://deb.nodesource.com/setup_11.x | bash - && apt-get install -y nodejs
+
+RUN curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg |  apt-key add - && echo "deb https://dl.yarnpkg.com/debian/ stable main" |  tee /etc/apt/sources.list.d/yarn.list && apt-get update &&  apt-get install -y yarn
+RUN yarn config set registry 'https://registry.npm.taobao.org' && npm config rm proxy && npm config rm https-proxy && npm config set sass-binary-site http://npm.taobao.org/mirrors/node-sass && jupyter labextension install  @jupyterlab/plotly-extension
 RUN jupyter notebook --generate-config && chmod 755 ./initpass.sh && ./initpass.sh
+
 ENTRYPOINT ["jupyter", "lab","--ip=0.0.0.0","--port=5002","--allow-root","--no-browser","--NotebookApp.notebook_dir=/opt","--NotebookApp.base_url=jupyter"]
