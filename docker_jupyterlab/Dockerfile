@@ -32,4 +32,4 @@ COPY . .
 RUN jupyter notebook --generate-config && chmod 755 ./initpass.sh && ./initpass.sh
 
 
-ENTRYPOINT ["jupyter", "lab","--ip=0.0.0.0","--port=5002","--allow-root","--no-browser","--NotebookApp.notebook_dir=/opt","--NotebookApp.base_url=jupyter"]
+ENTRYPOINT ["jupyter", "lab","--ip=0.0.0.0","--port=5002","--allow-root","--no-browser","--NotebookApp.notebook_dir=/opt","--NotebookApp.base_url=jupyter","--NotebookApp.certfile=/usr/src/app/cert.pem","--NotebookApp.keyfile=/usr/src/app/key.pem"]
