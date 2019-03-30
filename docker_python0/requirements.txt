@@ -15,3 +15,6 @@ plotly
 Uwsgi
 dateparser
 xlrd
+sqlalchemy
+flask-restful
+flasgger
