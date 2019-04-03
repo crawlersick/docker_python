@@ -18,3 +18,4 @@ xlrd
 sqlalchemy
 flask-restful
 flasgger
+Flask-SQLAlchemy
