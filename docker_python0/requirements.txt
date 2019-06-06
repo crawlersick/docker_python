@@ -25,3 +25,7 @@ schedule
 pycurl
 rsa
 python-gnupg
+xlwt
+openpyxl
+sqlacodegen
+Flask-Migrate
