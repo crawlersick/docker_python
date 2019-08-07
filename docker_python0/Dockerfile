@@ -16,6 +16,7 @@ RUN apt-get update && \
     apt-get clean && \
     apt-get autoclean && \
     apt-get autoremove && \
+    pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:UTF-8

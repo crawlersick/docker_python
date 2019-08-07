@@ -29,3 +29,7 @@ xlwt
 openpyxl
 sqlacodegen
 Flask-Migrate
+py2neo
+XlsxWriter
+requests
+kafka-python
