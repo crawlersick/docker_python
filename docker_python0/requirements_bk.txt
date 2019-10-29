@@ -1,4 +1,4 @@
-redis==3.0.0
+redis==2.10.6
 redis-py-cluster
 Flask
 Flask-Cors
@@ -9,6 +9,9 @@ PyMySQL
 pandas
 numpy
 scipy
+scikit-learn
+matplotlib
+plotly
 Uwsgi
 dateparser
 xlrd
@@ -16,6 +19,8 @@ sqlalchemy
 flask-restful
 flasgger
 flask-sqlalchemy
+pynsq==0.8.3
+tornado==4.5.3
 schedule
 pycurl
 rsa
