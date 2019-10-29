@@ -28,3 +28,4 @@ py2neo
 XlsxWriter
 requests
 kafka-python
+networkx
