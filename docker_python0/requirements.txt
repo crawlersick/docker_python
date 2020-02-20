@@ -1,9 +1,8 @@
-redis==2.10.6
+redis-py-cluster
 Flask
 Flask-Cors
 Flask-MySQL
 Flask-Redis
-cx_Oracle
 PyMySQL
 pandas
 numpy
@@ -16,16 +15,9 @@ flask-restful
 jsonschema==2.6.0
 flasgger
 flask-sqlalchemy
-schedule
-pycurl
 rsa
 python-gnupg
 xlwt
 openpyxl
-sqlacodegen
-Flask-Migrate
-py2neo
 XlsxWriter
 requests
-kafka-python
-networkx
