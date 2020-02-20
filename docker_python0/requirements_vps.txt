@@ -12,6 +12,7 @@ dateparser
 xlrd
 sqlalchemy
 flask-restful
+jsonschema==2.6.0
 flasgger
 flask-sqlalchemy
 rsa

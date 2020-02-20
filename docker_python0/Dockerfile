@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.7.5-buster
 
 WORKDIR /usr/src/app
 
@@ -12,7 +12,7 @@ RUN apt-get update && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     echo $TZ > /etc/timezone && \
     update-locale && \
-    apt-get install -y libaio1 libaio-dev zip unzip vim inotify-tools && \
+    apt-get install -y libaio1 libaio-dev zip unzip vim inotify-tools libblas-dev liblapack-dev libatlas-base-dev gfortran && \
     apt-get clean && \
     apt-get autoclean && \
     apt-get autoremove && \
