@@ -1,3 +1,4 @@
 instantclient_18_3/
 workingdir/
 instantclient_19_3/
+*.db
