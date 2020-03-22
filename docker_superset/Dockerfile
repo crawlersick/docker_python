@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.6-buster
 
 WORKDIR /usr/src/app
 
@@ -23,10 +23,14 @@ ENV TZ=Asia/Hong_Kong
 
 RUN pip install apache-superset
 RUN pip install mysqlclient
+RUN pip install gunicorn
 RUN superset db upgrade
 COPY . .
 RUN export FLASK_APP=superset && chmod 755 ./initpass.sh && ./initpass.sh
 RUN superset load_examples
 RUN superset init
 
-ENTRYPOINT ["superset", "run","-p","8088","--with-threads","--reload","--debugger"]
+RUN pip install gevent
+#ENTRYPOINT ["superset", "run","-p","8088","--with-threads","--reload","--debugger"]
+ENTRYPOINT ["gunicorn", "-w","10","-k","gevent","--timeout","120","-b","0.0.0.0:10086","--limit-request-line","0","--limit-request-field_size","0","superset:app"]
+#CMD ['bash']

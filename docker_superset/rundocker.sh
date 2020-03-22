@@ -1,2 +1,2 @@
-docker stop jupyterlab;docker rm jupyterlab
-docker run -v $PWD/workingdir:/opt -d -p 5002:5002 --restart unless-stopped --name cj jupyterlab
+docker run --name mysuperset_c -it --network host superset
+docker cp  mysuperset_c:./root/.superset/superset.db ./
