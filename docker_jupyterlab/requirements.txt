@@ -12,3 +12,4 @@ pytouch
 jupyter
 jupyterlab
 pymc3
+seaborn
